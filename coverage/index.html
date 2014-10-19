@@ -14,7 +14,7 @@
       <img src="./assets/0.8.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2014-10-19T18:18:27-04:00">2014-10-19T18:18:27-04:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2014-10-19T18:39:59-04:00">2014-10-19T18:39:59-04:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -32,8 +32,8 @@
   <a name="AllFiles"></a>
   <div>
     <b>27</b> files in total.
-    <b>193</b> relevant lines. 
-    <span class="green"><b>193</b> lines covered</span> and
+    <b>191</b> relevant lines. 
+    <span class="green"><b>191</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -283,9 +283,9 @@
       <tr>
         <td class="strong"><a href="#9e43d84f149dbc857f23ab9287fadbddf76de59e" class="src_link" title="spec/models/subscription_spec.rb">spec/models/subscription_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>33</td>
-        <td>20</td>
-        <td>20</td>
+        <td>31</td>
+        <td>18</td>
+        <td>18</td>
         <td>0</td>
         <td>1.2</td>
       </tr>
@@ -2867,8 +2867,8 @@
     <h3>spec/models/subscription_spec.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>20</b> relevant lines. 
-      <span class="green"><b>20</b> lines covered</span> and
+      <b>18</b> relevant lines. 
+      <span class="green"><b>18</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -2909,7 +2909,7 @@
         <li class="covered" data-hits="2" data-linenumber="6">
           <span class="hits">2</span>
           
-          <code class="ruby">	  	@subscription = Subscription.new</code>
+          <code class="ruby">	  	@subscription = Subscription.new(subscription_limit: 2)</code>
         </li>
       
         <li class="covered" data-hits="2" data-linenumber="7">
@@ -2975,100 +2975,88 @@
         <li class="covered" data-hits="1" data-linenumber="17">
           <span class="hits">1</span>
           
-          <code class="ruby">  			@subscription.stub(:subscription_limit).and_return 2</code>
+          <code class="ruby">  			@subscription.stub(:user).and_return @jack</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="18">
           <span class="hits">1</span>
           
-          <code class="ruby">  			@subscription.stub(:user).and_return @jack</code>
+          <code class="ruby">  			expect(@subscription.can_send_messages?).to eq true</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="19">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="19">
           
-          <code class="ruby">  			expect(@subscription.can_send_messages?).to eq true</code>
+          
+          <code class="ruby">  		end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="20">
           
           
-          <code class="ruby">  		end</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="21">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  	end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="22">
           
           
-          <code class="ruby">  	end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="23">
-          
-          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="24">
+        <li class="covered" data-hits="1" data-linenumber="23">
           <span class="hits">1</span>
           
           <code class="ruby">  	context &quot;when a user has reached the subscription limit for the month&quot; do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="25">
+        <li class="covered" data-hits="1" data-linenumber="24">
           <span class="hits">1</span>
           
           <code class="ruby">  		it &quot;returns false&quot; do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="26">
+        <li class="covered" data-hits="1" data-linenumber="25">
           <span class="hits">1</span>
           
           <code class="ruby">  			@jack.sent_messages.stub(:count).and_return 3</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="27">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  			@subscription.stub(:subscription_limit).and_return 2</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="28">
+        <li class="covered" data-hits="1" data-linenumber="26">
           <span class="hits">1</span>
           
           <code class="ruby">  			@subscription.stub(:user).and_return @jack</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="29">
+        <li class="covered" data-hits="1" data-linenumber="27">
           <span class="hits">1</span>
           
           <code class="ruby">  			expect(@subscription.can_send_messages?).to eq false</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="30">
+        <li class="never" data-hits="" data-linenumber="28">
           
           
           <code class="ruby">  		end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="31">
+        <li class="never" data-hits="" data-linenumber="29">
           
           
           <code class="ruby">  	end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="32">
+        <li class="never" data-hits="" data-linenumber="30">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="33">
+        <li class="never" data-hits="" data-linenumber="31">
           
           
           <code class="ruby">end</code>
